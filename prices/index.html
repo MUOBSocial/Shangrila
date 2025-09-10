@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Laundry Pricing - Transparent Rates | Shangri-la</title>
+    <meta name="description" content="View our comprehensive pricing for premium laundry, dry cleaning and ironing services. Transparent rates with no hidden fees. Commercial quotes available.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0f1419;
+            --primary-navy: #1a2332;
+            --accent-blue: #a8dadc;
+            --accent-blue-light: #c8e7e9;
+            --accent-blue-dark: #7bbbc7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a5568;
+            --text-light: #718096;
+            --white: #ffffff;
+            --cream: #fefdfb;
+            --cream-dark: #f7f5f3;
+            --border-light: #e2e8f0;
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-medium: rgba(0, 0, 0, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            background: var(--cream);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Advanced Typography */
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Luxury Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 20, 25, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        header.scrolled {
+            background: rgba(15, 20, 25, 0.98);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: all 0.4s ease;
+        }
+
+        header.scrolled nav {
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled .logo img {
+            height: 40px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 10px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        .nav-links a.active {
+            color: var(--accent-blue);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .luxury-cta {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-light));
+            color: var(--primary-dark);
+            padding: 14px 32px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(168, 218, 220, 0.3);
+        }
+
+        .luxury-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(168, 218, 220, 0.4);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 2px;
+            background: var(--white);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Page Hero Section */
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-navy) 100%);
+            color: var(--white);
+            padding: 160px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="luxury-pattern" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(168,218,220,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23luxury-pattern)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-hero-badge {
+            display: inline-block;
+            background: rgba(168, 218, 220, 0.15);
+            border: 1px solid rgba(168, 218, 220, 0.3);
+            color: var(--accent-blue);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+
+        .page-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+
+        .page-hero h1 span {
+            color: var(--accent-blue);
+        }
+
+        .page-hero p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .pricing-notice {
+            background: linear-gradient(135deg, var(--accent-blue-light), var(--accent-blue));
+            color: var(--primary-dark);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 60px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(168, 218, 220, 0.2);
+        }
+
+        .pricing-notice h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .pricing-notice p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .pricing-notice strong {
+            font-weight: 700;
+        }
+
+        /* Pricing Sections */
+        .pricing-section {
+            margin-bottom: 80px;
+        }
+
+        .pricing-section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 40px;
+            text-align: center;
+            position: relative;
+        }
+
+        .pricing-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-blue-light));
+            border-radius: 2px;
+        }
+
+        .pricing-table {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px var(--shadow-light);
+            border: 1px solid rgba(168, 218, 220, 0.1);
+            margin-bottom: 40px;
+        }
+
+        .pricing-table-header {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-light));
+            color: var(--white);
+            padding: 25px 30px;
+            text-align: center;
+        }
+
+        .pricing-table-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .pricing-table-body {
+            padding: 0;
+        }
+
+        .pricing-row {
+            display: flex;
+            align-items: center;
+            padding: 20px 30px;
+            border-bottom: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .pricing-row:hover {
+            background: var(--cream);
+        }
+
+        .pricing-row:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-item {
+            flex: 1;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .pricing-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            min-width: 100px;
+            text-align: right;
+        }
+
+        /* Special Multi-column Tables */
+        .multi-column-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .column-table {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px var(--shadow-light);
+            border: 1px solid rgba(168, 218, 220, 0.1);
+        }
+
+        .column-header {
+            background: var(--accent-blue);
+            color: var(--white);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .column-header h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .column-body {
+            padding: 0;
+        }
+
+        .column-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .column-row:hover {
+            background: var(--cream);
+        }
+
+        .column-row:last-child {
+            border-bottom: none;
+        }
+
+        .column-item {
+            font-weight: 500;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
+
+        .column-price {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--accent-blue);
+            font-size: 1.1rem;
+        }
+
+        /* Important Notes */
+        .pricing-notes {
+            background: var(--cream-dark);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 60px 0;
+            border-left: 5px solid var(--accent-blue);
+        }
+
+        .pricing-notes h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+        }
+
+        .pricing-notes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pricing-notes li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .pricing-notes li::before {
+            content: '•';
+            color: var(--accent-blue);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Contact CTA */
+        .contact-cta {
+            background: linear-gradient(135deg, var(--primary-navy), var(--primary-dark));
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="contact-pattern" width="60" height="60" patternUnits="userSpaceOnUse"><circle cx="30" cy="30" r="1" fill="rgba(168,218,220,0.1)"/></pattern></defs><rect width="60" height="60" fill="url(%23contact-pattern)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .contact-cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .contact-cta p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            background: var(--accent-blue);
+            color: var(--primary-dark);
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 25px rgba(168, 218, 220, 0.4);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(168, 218, 220, 0.5);
+            background: var(--accent-blue-light);
+        }
+
+        .contact-btn.secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .contact-btn.secondary:hover {
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+            background: transparent;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 80px 0 30px;
+            position: relative;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--accent-blue);
+            margin-bottom: 25px;
+        }
+
+        .footer-section p,
+        .footer-section li {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-blue);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .page-hero {
+                padding: 140px 0 80px;
+            }
+
+            .main-content {
+                padding: 60px 0;
+            }
+
+            .pricing-section {
+                margin-bottom: 60px;
+            }
+
+            .pricing-row {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+            }
+
+            .pricing-price {
+                margin-top: 10px;
+                text-align: left;
+                min-width: auto;
+            }
+
+            .multi-column-table {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .pricing-notes {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">
+                    <img src="https://images.squarespace-cdn.com/content/v1/6202c6fc68ccfd741e314656/16e8a7bc-acb6-48cf-8ad7-c5004fe5b015/Untitled+design.png" alt="Shangri-la Laundry">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="/prices" class="active">Pricing</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                <a href="/contact" class="luxury-cta">Book Collection</a>
+                <div class="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <div class="page-hero-badge">Transparent Pricing</div>
+                <h1 class="serif">Our <span>Premium</span> Pricing</h1>
+                <p>Luxury service at competitive rates with no hidden fees. Every price includes VAT for complete transparency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Pricing Notice -->
+            <div class="pricing-notice reveal">
+                <h3>Important Notice</h3>
+                <p><strong>Commercial clients:</strong> These prices are for residential customers only. For commercial service quotes, please call <strong>07806 634494</strong> or email <strong>enquiry@shangrilairon.co.uk</strong></p>
+                <p><strong>All prices include VAT</strong> • <strong>Delivery:</strong> £2.00 each way</p>
+            </div>
+
+            <!-- Iron Only Section -->
+            <div class="pricing-section reveal">
+                <h2 class="pricing-section-title">Iron Only Services</h2>
+                <div class="pricing-table">
+                    <div class="pricing-table-header">
+                        <h3>Professional Ironing</h3>
+                    </div>
+                    <div class="pricing-table-body">
+                        <div class="pricing-row">
+                            <div class="pricing-item">Emperor Bedding Set</div>
+                            <div class="pricing-price">£18.00</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Double/King/Super King Bedding Set</div>
+                            <div class="pricing-price">£15.50</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Single Bedding Set</div>
+                            <div class="pricing-price">£9.90</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Per Shirt</div>
+                            <div class="pricing-price">£2.97</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Per Kg of Clothing (not bedding)</div>
+                            <div class="pricing-price">£7.50</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wash & Iron Section -->
+            <div class="pricing-section reveal">
+                <h2 class="pricing-section-title">Wash & Iron Services</h2>
+                <div class="pricing-table">
+                    <div class="pricing-table-header">
+                        <h3>Complete Wash & Iron</h3>
+                    </div>
+                    <div class="pricing-table-body">
+                        <div class="pricing-row">
+                            <div class="pricing-item">Emperor Bedding Set</div>
+                            <div class="pricing-price">£25.00</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Double/King/Super King Bedding Set</div>
+                            <div class="pricing-price">£19.80</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Single Bedding Set</div>
+                            <div class="pricing-price">£13.20</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Under 4kg / kg *</div>
+                            <div class="pricing-price">£12.31</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Over 4kg / kg *</div>
+                            <div class="pricing-price">£11.65</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Per Shirt *</div>
+                            <div class="pricing-price">£4.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wash, Dry & Fold Section -->
+            <div class="pricing-section reveal">
+                <h2 class="pricing-section-title">Wash, Dry & Fold Services</h2>
+                
+                <!-- Weight-based pricing -->
+                <div class="pricing-table">
+                    <div class="pricing-table-header">
+                        <h3>By Weight</h3>
+                    </div>
+                    <div class="pricing-table-body">
+                        <div class="pricing-row">
+                            <div class="pricing-item">Under 4kg / kg</div>
+                            <div class="pricing-price">£4.81</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Over 4kg / kg</div>
+                            <div class="pricing-price">£4.15</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bedding specific pricing -->
+                <div class="multi-column-table">
+                    <div class="column-table">
+                        <div class="column-header">
+                            <h4>Duvets</h4>
+                        </div>
+                        <div class="column-body">
+                            <div class="column-row">
+                                <div class="column-item">Single Duvet</div>
+                                <div class="column-price">£15.00</div>
+                            </div>
+                            <div class="column-row">
+                                <div class="column-item">Double Duvet</div>
+                                <div class="column-price">£20.00</div>
+                            </div>
+                            <div class="column-row">
+                                <div class="column-item">King Duvet</div>
+                                <div class="column-price">£25.00</div>
+                            </div>
+                            <div class="column-row">
+                                <div class="column-item">Super King Duvet</div>
+                                <div class="column-price">£29.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column-table">
+                        <div class="column-header">
+                            <h4>Toppers</h4>
+                        </div>
+                        <div class="column-body">
+                            <div class="column-row">
+                                <div class="column-item">Single Topper</div>
+                                <div class="column-price">£10.00</div>
+                            </div>
+                            <div class="column-row">
+                                <div class="column-item">Double Topper</div>
+                                <div class="column-price">£15.00</div>
+                            </div>
+                            <div class="column-row">
+                                <div class="column-item">King Topper</div>
+                                <div class="column-price">£10.00</div>
+                            </div>
+                            <div class="column-row">
+                                <div class="column-item">Super King Topper</div>
+                                <div class="column-price">£22.00</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column-table">
+                        <div class="column-header">
+                            <h4>Pillows</h4>
+                        </div>
+                        <div class="column-body">
+                            <div class="column-row">
+                                <div class="column-item">Per Pillow</div>
+                                <div class="column-price">£12.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Miscellaneous Services -->
+            <div class="pricing-section reveal">
+                <h2 class="pricing-section-title">Additional Services</h2>
+                <div class="pricing-table">
+                    <div class="pricing-table-header">
+                        <h3>Specialty Services</h3>
+                    </div>
+                    <div class="pricing-table-body">
+                        <div class="pricing-row">
+                            <div class="pricing-item">Shirt Folding (per shirt)</div>
+                            <div class="pricing-price">£0.60</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Starch (per can)</div>
+                            <div class="pricing-price">£4.40</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Stain Removal (collar or 10x10cm area)</div>
+                            <div class="pricing-price">£0.60</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Alterations</div>
+                            <div class="pricing-price">POI</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Dry Cleaning</div>
+                            <div class="pricing-price">POI</div>
+                        </div>
+                        <div class="pricing-row">
+                            <div class="pricing-item">Delivery (each way)</div>
+                            <div class="pricing-price">£2.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Notes -->
+            <div class="pricing-notes reveal">
+                <h3>Important Information</h3>
+                <ul>
+                    <li><strong>Bedding Sets Include Towels</strong> - Our bedding set prices include towels for added value</li>
+                    <li><strong>Feather & Down Surcharge</strong> - 15% additional charge applies to feather or down items</li>
+                    <li><strong>Shirt Estimates</strong> - Prices marked with * vary based on shirt weight and quantity</li>
+                    <li><strong>POI Services</strong> - "Price on Inquiry" items require individual quotes based on specific requirements</li>
+                    <li><strong>Delivery Area</strong> - £2.00 delivery charge applies within 25 miles of our Bicester location</li>
+                    <li><strong>VAT Included</strong> - All displayed prices include VAT with no hidden charges</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="contact-cta-content">
+                <h2 class="serif">Need a Custom Quote?</h2>
+                <p>Our team is here to provide personalized pricing for your specific requirements.</p>
+                <div class="contact-buttons">
+                    <a href="tel:07806634494" class="contact-btn">Call Now</a>
+                    <a href="mailto:enquiry@shangrilairon.co.uk" class="contact-btn secondary">Email Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>17 Wedgewood Road<br>Bicester, Oxfordshire<br>OX26 4UL</p>
+                    <p><strong>Phone:</strong> 01869 369485<br><strong>Mobile:</strong> 07806 634494</p>
+                    <p><strong>Email:</strong> enquiry@shangrilairon.co.uk</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Business Hours</h3>
+                    <p><strong>Monday - Tuesday</strong><br>8:00am - 5:30pm</p>
+                    <p><strong>Wednesday - Friday</strong><br>8:00am - 1:00pm</p>
+                    <p><strong>Saturday</strong><br>9:00am - 12:00pm</p>
+                    <p><strong>Sunday:</strong> Closed</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="/">Dry Cleaning</a></li>
+                        <li><a href="/">Laundry Service</a></li>
+                        <li><a href="/">Professional Ironing</a></li>
+                        <li><a href="/">Commercial Services</a></li>
+                        <li><a href="/">Linen Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/prices">Pricing</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/loyalty">Loyalty Program</a></li>
+                        <li><a href="/hotels">Hotels & B&B's</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shangri-la Laundry and Ironing Ltd. All rights reserved. | Luxury laundry services in Oxfordshire & Buckinghamshire</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header Scroll Effects
+        let lastScrollTop = 0;
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Hide header on scroll down, show on scroll up
+            if (scrollTop > lastScrollTop && scrollTop > 200) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        // Mobile Menu
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.getElementById('header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
