@@ -12,9 +12,9 @@
         :root {
             --primary-dark: #0f1419;
             --primary-navy: #1a2332;
-            --accent-gold: #d4af37;
-            --accent-gold-light: #e6c55a;
-            --accent-gold-dark: #b8941f;
+            --accent-blue: #a8dadc;
+            --accent-blue-light: #c8e7e9;
+            --accent-blue-dark: #7bbbc7;
             --text-primary: #1a1a1a;
             --text-secondary: #4a5568;
             --text-light: #718096;
@@ -123,7 +123,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent-gold);
+            background: var(--accent-blue);
             transition: width 0.3s ease;
         }
 
@@ -132,11 +132,11 @@
         }
 
         .nav-links a:hover {
-            color: var(--accent-gold);
+            color: var(--accent-blue);
         }
 
         .luxury-cta {
-            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-light));
             color: var(--primary-dark);
             padding: 14px 32px;
             border: none;
@@ -149,7 +149,7 @@
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 4px 20px rgba(168, 218, 220, 0.3);
         }
 
         .luxury-cta::before {
@@ -169,7 +169,7 @@
 
         .luxury-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 8px 30px rgba(168, 218, 220, 0.4);
         }
 
         .mobile-menu {
@@ -231,9 +231,9 @@
 
         .hero-badge {
             display: inline-block;
-            background: rgba(212, 175, 55, 0.15);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            color: var(--accent-gold);
+            background: rgba(168, 218, 220, 0.15);
+            border: 1px solid rgba(168, 218, 220, 0.3);
+            color: var(--accent-blue);
             padding: 8px 20px;
             border-radius: 50px;
             font-size: 14px;
@@ -254,7 +254,7 @@
         }
 
         .hero-title span {
-            color: var(--accent-gold);
+            color: var(--accent-blue);
             position: relative;
         }
 
@@ -278,7 +278,7 @@
         }
 
         .hero-cta-primary {
-            background: var(--accent-gold);
+            background: var(--accent-blue);
             color: var(--primary-dark);
             padding: 18px 40px;
             border: none;
@@ -289,13 +289,13 @@
             text-decoration: none;
             text-transform: uppercase;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 6px 25px rgba(168, 218, 220, 0.4);
         }
 
         .hero-cta-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.5);
-            background: var(--accent-gold-light);
+            box-shadow: 0 10px 35px rgba(168, 218, 220, 0.5);
+            background: var(--accent-blue-light);
         }
 
         .hero-cta-secondary {
@@ -311,8 +311,8 @@
         }
 
         .hero-cta-secondary:hover {
-            border-color: var(--accent-gold);
-            color: var(--accent-gold);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
             transform: translateY(-1px);
         }
 
@@ -337,7 +337,7 @@
 
         .floating-element {
             position: absolute;
-            background: rgba(212, 175, 55, 0.1);
+            background: rgba(168, 218, 220, 0.1);
             border-radius: 50%;
             animation: float 6s ease-in-out infinite;
         }
@@ -385,7 +385,7 @@
 
         .section-badge {
             display: inline-block;
-            background: var(--accent-gold);
+            background: var(--accent-blue);
             color: var(--white);
             padding: 6px 16px;
             border-radius: 20px;
@@ -425,7 +425,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(212,175,55,0.03)"/><circle cx="80" cy="40" r="1" fill="rgba(212,175,55,0.02)"/><circle cx="40" cy="80" r="1" fill="rgba(212,175,55,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(168,218,220,0.03)"/><circle cx="80" cy="40" r="1" fill="rgba(168,218,220,0.02)"/><circle cx="40" cy="80" r="1" fill="rgba(168,218,220,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
             opacity: 0.4;
             pointer-events: none;
         }
@@ -443,7 +443,7 @@
             border-radius: 20px;
             text-align: center;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(168, 218, 220, 0.1);
             position: relative;
             overflow: hidden;
             box-shadow: 0 10px 40px var(--shadow-light);
@@ -456,7 +456,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-light));
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -468,26 +468,26 @@
         .service-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 25px 60px var(--shadow-medium);
-            border-color: var(--accent-gold);
+            border-color: var(--accent-blue);
         }
 
         .service-icon {
             width: 100px;
             height: 100px;
             margin: 0 auto 30px;
-            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-light));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 8px 25px rgba(168, 218, 220, 0.3);
         }
 
         .service-card:hover .service-icon {
             transform: scale(1.1);
-            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 12px 35px rgba(168, 218, 220, 0.4);
         }
 
         .service-icon svg {
@@ -529,7 +529,7 @@
             right: -50%;
             width: 100%;
             height: 200%;
-            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(168, 218, 220, 0.1) 0%, transparent 70%);
             pointer-events: none;
         }
 
@@ -558,8 +558,8 @@
             width: 80px;
             height: 80px;
             margin: 0 auto 25px;
-            background: rgba(212, 175, 55, 0.2);
-            border: 2px solid var(--accent-gold);
+            background: rgba(168, 218, 220, 0.2);
+            border: 2px solid var(--accent-blue);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -569,14 +569,14 @@
         }
 
         .feature-item:hover .feature-icon {
-            background: var(--accent-gold);
+            background: var(--accent-blue);
             transform: scale(1.1);
         }
 
         .feature-icon svg {
             width: 40px;
             height: 40px;
-            fill: var(--accent-gold);
+            fill: var(--accent-blue);
             transition: all 0.3s ease;
         }
 
@@ -621,7 +621,7 @@
             right: -30px;
             width: 60px;
             height: 2px;
-            background: linear-gradient(90deg, var(--accent-gold), transparent);
+            background: linear-gradient(90deg, var(--accent-blue), transparent);
         }
 
         .step:last-child::after {
@@ -631,7 +631,7 @@
         .step-number {
             width: 80px;
             height: 80px;
-            background: var(--accent-gold);
+            background: var(--accent-blue);
             color: var(--white);
             border-radius: 50%;
             display: flex;
@@ -642,7 +642,7 @@
             margin: 0 auto 25px;
             position: relative;
             z-index: 2;
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 6px 20px rgba(168, 218, 220, 0.3);
         }
 
         .step h3 {
@@ -673,7 +673,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="stars" width="60" height="60" patternUnits="userSpaceOnUse"><polygon points="30,5 35,20 50,20 38,30 42,45 30,37 18,45 22,30 10,20 25,20" fill="rgba(212,175,55,0.05)"/></pattern></defs><rect width="60" height="60" fill="url(%23stars)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="stars" width="60" height="60" patternUnits="userSpaceOnUse"><polygon points="30,5 35,20 50,20 38,30 42,45 30,37 18,45 22,30 10,20 25,20" fill="rgba(168,218,220,0.05)"/></pattern></defs><rect width="60" height="60" fill="url(%23stars)"/></svg>');
             opacity: 0.3;
         }
 
@@ -715,7 +715,7 @@
             left: 20px;
             font-size: 4rem;
             font-family: 'Playfair Display', serif;
-            color: var(--accent-gold);
+            color: var(--accent-blue);
             line-height: 1;
         }
 
@@ -729,7 +729,7 @@
 
         .testimonial-author {
             font-weight: 600;
-            color: var(--accent-gold);
+            color: var(--accent-blue);
             font-size: 0.95rem;
             letter-spacing: 0.5px;
         }
@@ -764,11 +764,11 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light));
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-blue-light));
         }
 
         .pricing-card:hover {
-            border-color: var(--accent-gold);
+            border-color: var(--accent-blue);
             transform: translateY(-5px);
             box-shadow: 0 20px 40px var(--shadow-medium);
         }
@@ -785,7 +785,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--accent-gold);
+            color: var(--accent-blue);
             margin-bottom: 15px;
         }
 
@@ -813,7 +813,7 @@
             padding: 60px;
             border-radius: 25px;
             box-shadow: 0 25px 60px var(--shadow-medium);
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(168, 218, 220, 0.1);
         }
 
         .form-group {
@@ -846,9 +846,9 @@
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: var(--accent-gold);
+            border-color: var(--accent-blue);
             background: var(--white);
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+            box-shadow: 0 0 0 3px rgba(168, 218, 220, 0.1);
         }
 
         .form-group textarea {
@@ -858,7 +858,7 @@
 
         .submit-btn {
             width: 100%;
-            background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-blue-light));
             color: var(--white);
             padding: 20px;
             border: none;
@@ -869,12 +869,12 @@
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
+            box-shadow: 0 8px 25px rgba(168, 218, 220, 0.3);
         }
 
         .submit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+            box-shadow: 0 12px 35px rgba(168, 218, 220, 0.4);
         }
 
         /* Footer */
@@ -896,7 +896,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.5rem;
             font-weight: 600;
-            color: var(--accent-gold);
+            color: var(--accent-blue);
             margin-bottom: 25px;
         }
 
@@ -918,7 +918,7 @@
         }
 
         .footer-section a:hover {
-            color: var(--accent-gold);
+            color: var(--accent-blue);
         }
 
         .social-links {
@@ -930,20 +930,20 @@
         .social-links a {
             width: 50px;
             height: 50px;
-            background: rgba(212, 175, 55, 0.2);
-            border: 2px solid var(--accent-gold);
+            background: rgba(168, 218, 220, 0.2);
+            border: 2px solid var(--accent-blue);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--accent-gold);
+            color: var(--accent-blue);
             font-size: 1.3rem;
             transition: all 0.3s ease;
             backdrop-filter: blur(10px);
         }
 
         .social-links a:hover {
-            background: var(--accent-gold);
+            background: var(--accent-blue);
             color: var(--white);
             transform: translateY(-3px);
         }
@@ -1052,7 +1052,7 @@
         </div>
         <div class="hero-content">
             <div class="hero-badge">Since 2014 - Trusted Excellence</div>
-            <h1 class="hero-title serif">Laundry, <span>Ironing</span> & Dry Cleaning</h1>
+            <h1 class="hero-title serif">Luxury <span>Laundry</span> & Dry Cleaning</h1>
             <p class="hero-subtitle">Experience unparalleled care for your finest garments with our premium doorstep service across Oxfordshire & Buckinghamshire</p>
             <div class="hero-cta-group">
                 <a href="#contact" class="hero-cta-primary">Schedule Collection</a>
@@ -1067,7 +1067,7 @@
             <div class="section-intro reveal">
                 <div class="section-badge">Premium Services</div>
                 <h2 class="section-title serif">Exceptional Care for Every Fabric</h2>
-                <p class="section-subtitle">Professional care for all your laundry needs with experienced staff and eco-friendly cleaning products</p>
+                <p class="section-subtitle">From delicate silks to robust cottons, our expert craftsmen provide meticulous attention to every garment with state-of-the-art equipment and eco-conscious practices</p>
             </div>
             
             <div class="services-grid">
@@ -1077,8 +1077,8 @@
                             <path d="M12.5 2C13.88 2 15 3.12 15 4.5V6H17C18.1 6 19 6.9 19 8V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V8C5 6.9 5.9 6 7 6H9V4.5C9 3.12 10.12 2 11.5 2H12.5M12.5 4H11.5C11.22 4 11 4.22 11 4.5V6H13V4.5C13 4.22 12.78 4 12.5 4M7 8V9H17V8H7M7 11V19H17V11H7Z"/>
                         </svg>
                     </div>
-                    <h3>Laundry Service</h3>
-                    <p>Commercial-grade washing with eco-friendly detergents from £4.15/kg</p>
+                    <h3>Premium Laundry</h3>
+                    <p>Commercial-grade washing with premium eco-friendly detergents and precise temperature control from £4.15/kg</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">
@@ -1086,8 +1086,8 @@
                             <path d="M21 6V4H3V6L4 7V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V7L21 6M18 7H6V18H18V7M7 8H17V9H7V8M12 13.5L9 16.5L15 10.5L12 13.5Z"/>
                         </svg>
                     </div>
-                    <h3>Professional Ironing</h3>
-                    <p>Expert pressing with professional steam systems from £7.50/kg or £2.97 per shirt</p>
+                    <h3>Master Ironing</h3>
+                    <p>Artisan pressing with professional steam systems for that crisp, perfect finish from £7.50/kg or £2.97 per shirt</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">
@@ -1095,8 +1095,8 @@
                             <path d="M18 8C18.56 8 19.11 8.07 19.64 8.21L21.79 4.93L20.21 4.07L18.76 6.63C17.5 6.24 16.14 6 14.72 6H9.28C5.04 6 2 7.9 2 10.5S5.04 15 9.28 15H14.72C16.14 15 17.5 14.76 18.76 14.37L20.21 16.93L21.79 16.07L19.64 12.79C19.11 12.93 18.56 13 18 13V8M18 10V11H20V10H18Z"/>
                         </svg>
                     </div>
-                    <h3>Collection & Delivery</h3>
-                    <p>Convenient pickup and delivery service within 25 miles of Bicester for just £2.00</p>
+                    <h3>Concierge Collection</h3>
+                    <p>White-glove pickup and delivery service within 25 miles of Bicester. Scheduled at your convenience for just £2.00</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">
@@ -1104,8 +1104,8 @@
                             <path d="M6 2L4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4L18 2H6M6 4H18V20H6V4M8 6V8H16V6H8M8 10V12H16V10H8M8 14V16H13V14H8"/>
                         </svg>
                     </div>
-                    <h3>Dry Cleaning</h3>
-                    <p>Expert dry cleaning for suits, dresses, and delicate garments using eco-friendly processes</p>
+                    <h3>Expert Dry Cleaning</h3>
+                    <p>Specialized care for suits, evening wear, and delicate fabrics using advanced eco-friendly solvents and techniques</p>
                 </div>
             </div>
         </div>
@@ -1115,9 +1115,9 @@
     <section class="features">
         <div class="container">
             <div class="section-intro reveal">
-                <div class="section-badge">Why Choose Us</div>
-                <h2 class="section-title serif">Why People Choose Shangri-la</h2>
-                <p class="section-subtitle">Two decades of expertise combined with reliable service and competitive pricing</p>
+                <div class="section-badge">Excellence Defined</div>
+                <h2 class="section-title serif">Why Discerning Clients Choose Shangri-la</h2>
+                <p class="section-subtitle">Three generations of expertise combined with cutting-edge technology and an unwavering commitment to perfection</p>
             </div>
             
             <div class="features-grid">
@@ -1127,8 +1127,8 @@
                             <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4C18.11 4 19 4.9 19 6V19C19 20.11 18.11 21 17 21H7C5.9 21 5 20.11 5 19V6C5 4.9 5.9 4 7 4M9 3V4H15V3H9M7 6V19H17V6H7M12 8L15.5 11L12 14L8.5 11L12 8Z"/>
                         </svg>
                     </div>
-                    <h3>Expert Care</h3>
-                    <p>Two decades of experience with professional equipment ensuring excellent results for every garment</p>
+                    <h3>Master Craftsmanship</h3>
+                    <p>Three decades of expertise with professional-grade equipment ensuring immaculate results for every garment</p>
                 </div>
                 <div class="feature-item reveal">
                     <div class="feature-icon">
@@ -1136,8 +1136,8 @@
                             <path d="M18 8C18.56 8 19.11 8.07 19.64 8.21L21.79 4.93L20.21 4.07L18.76 6.63C17.5 6.24 16.14 6 14.72 6H9.28C5.04 6 2 7.9 2 10.5S5.04 15 9.28 15H14.72C16.14 15 17.5 14.76 18.76 14.37L20.21 16.93L21.79 16.07L19.64 12.79C19.11 12.93 18.56 13 18 13V8M18 10V11H20V10H18Z"/>
                         </svg>
                     </div>
-                    <h3>Convenient Service</h3>
-                    <p>Collection and delivery service that fits your schedule, with reliable timing and friendly staff</p>
+                    <h3>Luxury Convenience</h3>
+                    <p>Seamless collection and delivery service that fits your lifestyle, with flexible scheduling and reliable timing</p>
                 </div>
                 <div class="feature-item reveal">
                     <div class="feature-icon">
@@ -1145,8 +1145,8 @@
                             <path d="M17,8C17.44,8 17.84,8.05 18.21,8.14L19,6.27C19.8,4.53 21,4 21,4L20.5,3C20.5,3 18.24,3.5 16.5,5.24C15.31,6.44 14.64,8 14.64,8H9.36C9.36,8 8.69,6.44 7.5,5.24C5.76,3.5 3.5,3 3.5,3L3,4C3,4 4.2,4.53 5,6.27L5.79,8.14C6.16,8.05 6.56,8 7,8H17M7,10V20H9V10H7M15,10V20H17V10H15M11,10V20H13V10H11Z"/>
                         </svg>
                     </div>
-                    <h3>Eco-Friendly</h3>
-                    <p>We use environmentally responsible cleaning products and processes</p>
+                    <h3>Sustainable Luxury</h3>
+                    <p>Premium eco-conscious processes that protect both your garments and our environment without compromise</p>
                 </div>
                 <div class="feature-item reveal">
                     <div class="feature-icon">
@@ -1154,8 +1154,8 @@
                             <path d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
                         </svg>
                     </div>
-                    <h3>Trusted Locally</h3>
-                    <p>Family business serving Oxfordshire & Buckinghamshire with excellent customer reviews</p>
+                    <h3>Trusted Heritage</h3>
+                    <p>Family business serving discerning clients across Oxfordshire & Buckinghamshire with unmatched reputation</p>
                 </div>
             </div>
         </div>
@@ -1201,28 +1201,16 @@
             
             <div class="testimonials-grid">
                 <div class="testimonial reveal">
-                    <p>We have used the services of Shangri-la for several years and have nothing but the highest praise for all they do: ironing, laundry, emergency stain removal, and delivery/collection. All are excellent.</p>
-                    <div class="testimonial-author">— Long-term Customer</div>
+                    <p>The staff are very friendly, their advice always excellent. The quality of work is consistently outstanding. I would highly recommend Shangri-la to anyone seeking premium care.</p>
+                    <div class="testimonial-author">— Satisfied Client</div>
                 </div>
                 <div class="testimonial reveal">
-                    <p>I find all the members of the Shangri-La team to be helpful, accommodating and always professional. I use both the laundry company and the cleaning company and have always been super happy with the quality of service. I also find their pricing to be very fair and transparent.</p>
-                    <div class="testimonial-author">— Regular Client</div>
+                    <p>I find all the members of the Shangri-La team to be helpful, accommodating and always professional. Their attention to detail is simply unmatched in the region.</p>
+                    <div class="testimonial-author">— Regular Customer</div>
                 </div>
                 <div class="testimonial reveal">
-                    <p>I have used Shangri-la Laundry services over the past five years. Always a great service, sending a text to let you know when to collect, friendly and helpful staff. I would highly recommend them to anyone.</p>
-                    <div class="testimonial-author">— 5-Year Customer</div>
-                </div>
-                <div class="testimonial reveal">
-                    <p>We, at Stratton Court Barn, love Shangri-la and their efficient service, friendly people and also want to support a local family business.</p>
-                    <div class="testimonial-author">— Stratton Court Barn</div>
-                </div>
-                <div class="testimonial reveal">
-                    <p>I have tried many Air B&B Laundry services over the years and these guys beat them all hands down. Professional, reliable and most importantly excellent at their job.</p>
-                    <div class="testimonial-author">— B&B Owner</div>
-                </div>
-                <div class="testimonial reveal">
-                    <p>Great service and a quick turn around, I found Shangri-la great value for money. What more could you ask for?</p>
-                    <div class="testimonial-author">— Satisfied Customer</div>
+                    <p>Great service and a quick turn around. I found Shangri-la great value for money considering the exceptional quality and convenience they provide.</p>
+                    <div class="testimonial-author">— Business Professional</div>
                 </div>
             </div>
         </div>
@@ -1239,19 +1227,19 @@
             
             <div class="pricing-grid">
                 <div class="pricing-card reveal">
-                    <h3>Laundry Service</h3>
+                    <h3>Premium Laundry</h3>
                     <div class="price">£4.15<span class="price-unit">/kg</span></div>
-                    <p>Commercial-grade washing with eco-friendly detergents and professional care</p>
+                    <p>Commercial-grade washing with luxury eco-friendly detergents and precision care</p>
                 </div>
                 <div class="pricing-card reveal">
-                    <h3>Professional Ironing</h3>
+                    <h3>Master Ironing</h3>
                     <div class="price">£7.50<span class="price-unit">/kg</span></div>
-                    <p>Expert pressing from £2.97 per shirt with professional finishing</p>
+                    <p>Professional pressing from £2.97 per shirt with expert finishing techniques</p>
                 </div>
                 <div class="pricing-card reveal">
-                    <h3>Collection & Delivery</h3>
-                    <div class="price">£2.00<span class="price-unit">flat rate</span></div>
-                    <p>Convenient pickup and delivery within 25 miles of Bicester</p>
+                    <h3>Concierge Service</h3>
+                    <div class="price">£2.00<span class="price-unit">delivery</span></div>
+                    <p>White-glove collection and delivery within 25 miles of Bicester</p>
                 </div>
             </div>
             
@@ -1271,20 +1259,40 @@
             </div>
             
             <div class="form-container reveal">
-                <iframe 
-                    data-tally-src="https://tally.so/embed/mRAzRp?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-                    loading="lazy" 
-                    width="100%" 
-                    height="500" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0" 
-                    title="Schedule Your Collection">
-                </iframe>
-                <script>
-                    var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};
-                    if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.head.appendChild(s);}
-                </script>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Collection Address</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Required</label>
+                        <select id="service" name="service" required>
+                            <option value="">Please select your preferred service...</option>
+                            <option value="laundry">Premium Laundry Service</option>
+                            <option value="dry-cleaning">Expert Dry Cleaning</option>
+                            <option value="ironing">Master Ironing Service</option>
+                            <option value="commercial">Commercial Services</option>
+                            <option value="consultation">Personal Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Special Requirements (Optional)</label>
+                        <textarea id="message" name="message" placeholder="Please share any specific care instructions or preferences..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Schedule Collection</button>
+                </form>
             </div>
         </div>
     </section>
