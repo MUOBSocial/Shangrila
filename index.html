@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Laundry, Dry Cleaning & Ironing in Oxfordshire | Shangri-la</title>
-    <meta name="description" content="Professional laundry, dry cleaning and ironing services in Oxfordshire & Buckinghamshire. Doorstep collection & delivery. Expert care since 2014.">
+    <title>Professional Laundry, Dry Cleaning & Ironing in Oxfordshire | Shangri-la</title>
+    <meta name="description" content="Professional laundry, dry cleaning and ironing services in Oxfordshire & Buckinghamshire. Doorstep collection & delivery. Serving customers since 2014.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -658,7 +658,7 @@
             line-height: 1.7;
         }
 
-        /* Testimonials Carousel */
+        /* Testimonials Carousel - NEW STYLES */
         .testimonials {
             background: linear-gradient(135deg, var(--primary-navy), var(--primary-dark));
             color: var(--white);
@@ -685,53 +685,113 @@
             color: rgba(255, 255, 255, 0.8);
         }
 
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 80px;
+        /* Reviews Carousel Styles */
+        .reviews-scroll-container { 
+            position: relative; 
+            margin-top: 60px; 
+            overflow: hidden; 
         }
 
-        .testimonial {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 20px;
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            position: relative;
-            z-index: 2;
-            transition: all 0.3s ease;
+        .reviews-grid {
+            display: flex; 
+            gap: 20px; 
+            overflow-x: auto; 
+            padding-bottom: 14px;
+            scroll-behavior: smooth; 
+            scroll-snap-type: x mandatory; 
+            -webkit-overflow-scrolling: touch;
         }
 
-        .testimonial:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
+        .review-card {
+            flex: 0 0 auto; 
+            width: 320px; 
+            min-height: 220px;
+            background: rgba(255,255,255,0.12); 
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 16px; 
+            padding: 22px; 
+            backdrop-filter: blur(18px);
+            scroll-snap-align: start; 
+            transition: transform .2s ease, box-shadow .2s ease;
         }
 
-        .testimonial::before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            font-size: 4rem;
-            font-family: 'Playfair Display', serif;
-            color: var(--accent-blue);
-            line-height: 1;
+        .review-card:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 14px 30px rgba(0,0,0,0.18); 
         }
 
-        .testimonial p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            font-style: italic;
-            margin-bottom: 25px;
-            padding-top: 20px;
+        .review-head { 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            margin-bottom: 10px; 
+            font-size: 0.9rem; 
+            opacity: .9; 
         }
 
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--accent-blue);
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
+        .review-stars { 
+            letter-spacing: 2px; 
+        }
+
+        .review-source {
+            padding: 2px 8px; 
+            border-radius: 999px; 
+            background: rgba(168,218,220,0.18);
+            border: 1px solid rgba(168,218,220,0.4); 
+            color: var(--accent-blue); 
+            font-weight: 600; 
+            font-size: 12px;
+        }
+
+        .review-date { 
+            color: rgba(255,255,255,0.8); 
+            font-size: 12px; 
+            margin-left: auto; 
+        }
+
+        .review-text { 
+            font-size: 1rem; 
+            line-height: 1.6; 
+            margin: 8px 0 14px; 
+        }
+
+        .review-author { 
+            color: var(--accent-blue); 
+            font-weight: 600; 
+            font-size: 0.95rem; 
+        }
+
+        .reviews-nav { 
+            display: flex; 
+            gap: 10px; 
+            justify-content: center; 
+            margin-top: 16px; 
+        }
+
+        .reviews-btn {
+            width: 42px; 
+            height: 42px; 
+            border-radius: 50%;
+            background: rgba(255,255,255,0.12); 
+            border: 1px solid rgba(255,255,255,0.25);
+            color: #fff; 
+            font-size: 22px; 
+            line-height: 1; 
+            cursor: pointer;
+        }
+
+        .reviews-btn:disabled { 
+            opacity: .4; 
+            cursor: default; 
+        }
+
+        .reviews-grid::-webkit-scrollbar { 
+            height: 10px; 
+        }
+
+        .reviews-grid::-webkit-scrollbar-thumb {
+            border-radius: 10px; 
+            background: linear-gradient(90deg, rgba(168,218,220,.5), rgba(168,218,220,.25));
         }
 
         /* Pricing Section */
@@ -980,7 +1040,6 @@
             .services-grid,
             .features-grid,
             .steps,
-            .testimonials-grid,
             .pricing-grid {
                 grid-template-columns: 1fr;
             }
@@ -996,6 +1055,11 @@
 
             .step::after {
                 display: none;
+            }
+
+            .review-card { 
+                width: 280px; 
+                padding: 18px; 
             }
         }
 
@@ -1051,12 +1115,12 @@
             <div class="floating-element"></div>
         </div>
         <div class="hero-content">
-            <div class="hero-badge">Since 2014 - Trusted Excellence</div>
-            <h1 class="hero-title serif">Luxury <span>Laundry</span> & Dry Cleaning</h1>
-            <p class="hero-subtitle">Experience unparalleled care for your finest garments with our premium doorstep service across Oxfordshire & Buckinghamshire</p>
+            <div class="hero-badge">Since 2014 - Trusted Service</div>
+            <h1 class="hero-title serif">Professional <span>Laundry</span> & Dry Cleaning</h1>
+            <p class="hero-subtitle">We collect your laundry and dry cleaning from your door and return it fresh, clean and ready to wear. Serving customers across Oxfordshire and Buckinghamshire.</p>
             <div class="hero-cta-group">
                 <a href="#contact" class="hero-cta-primary">Schedule Collection</a>
-                <a href="#services" class="hero-cta-secondary">Discover Services</a>
+                <a href="#services" class="hero-cta-secondary">View Services</a>
             </div>
         </div>
     </section>
@@ -1065,9 +1129,9 @@
     <section id="services" class="services">
         <div class="container">
             <div class="section-intro reveal">
-                <div class="section-badge">Premium Services</div>
-                <h2 class="section-title serif">Exceptional Care for Every Fabric</h2>
-                <p class="section-subtitle">From delicate silks to robust cottons, our expert craftsmen provide meticulous attention to every garment with state-of-the-art equipment and eco-conscious practices</p>
+                <div class="section-badge">Our Services</div>
+                <h2 class="section-title serif">Our laundry and dry cleaning services</h2>
+                <p class="section-subtitle">We handle everything from everyday washing to specialist dry cleaning. All work is done by experienced staff using professional equipment.</p>
             </div>
             
             <div class="services-grid">
@@ -1077,8 +1141,8 @@
                             <path d="M12.5 2C13.88 2 15 3.12 15 4.5V6H17C18.1 6 19 6.9 19 8V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V8C5 6.9 5.9 6 7 6H9V4.5C9 3.12 10.12 2 11.5 2H12.5M12.5 4H11.5C11.22 4 11 4.22 11 4.5V6H13V4.5C13 4.22 12.78 4 12.5 4M7 8V9H17V8H7M7 11V19H17V11H7Z"/>
                         </svg>
                     </div>
-                    <h3>Premium Laundry</h3>
-                    <p>Commercial-grade washing with premium eco-friendly detergents and precise temperature control from £4.15/kg</p>
+                    <h3>Laundry Service</h3>
+                    <p>Thorough washing with quality detergents and careful temperature control. £4.15 per kg.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">
@@ -1086,8 +1150,8 @@
                             <path d="M21 6V4H3V6L4 7V18C4 19.1 4.9 20 6 20H18C19.1 20 20 19.1 20 18V7L21 6M18 7H6V18H18V7M7 8H17V9H7V8M12 13.5L9 16.5L15 10.5L12 13.5Z"/>
                         </svg>
                     </div>
-                    <h3>Master Ironing</h3>
-                    <p>Artisan pressing with professional steam systems for that crisp, perfect finish from £7.50/kg or £2.97 per shirt</p>
+                    <h3>Professional Ironing</h3>
+                    <p>Crisp, professional pressing using commercial steam equipment. £7.50 per kg or £2.97 per shirt.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">
@@ -1095,8 +1159,8 @@
                             <path d="M18 8C18.56 8 19.11 8.07 19.64 8.21L21.79 4.93L20.21 4.07L18.76 6.63C17.5 6.24 16.14 6 14.72 6H9.28C5.04 6 2 7.9 2 10.5S5.04 15 9.28 15H14.72C16.14 15 17.5 14.76 18.76 14.37L20.21 16.93L21.79 16.07L19.64 12.79C19.11 12.93 18.56 13 18 13V8M18 10V11H20V10H18Z"/>
                         </svg>
                     </div>
-                    <h3>Concierge Collection</h3>
-                    <p>White-glove pickup and delivery service within 25 miles of Bicester. Scheduled at your convenience for just £2.00</p>
+                    <h3>Collection and Delivery</h3>
+                    <p>We collect and deliver within 25 miles of Bicester. Just £2.00 per trip, scheduled to suit you.</p>
                 </div>
                 <div class="service-card reveal">
                     <div class="service-icon">
@@ -1104,8 +1168,8 @@
                             <path d="M6 2L4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V4L18 2H6M6 4H18V20H6V4M8 6V8H16V6H8M8 10V12H16V10H8M8 14V16H13V14H8"/>
                         </svg>
                     </div>
-                    <h3>Expert Dry Cleaning</h3>
-                    <p>Specialized care for suits, evening wear, and delicate fabrics using advanced eco-friendly solvents and techniques</p>
+                    <h3>Dry Cleaning</h3>
+                    <p>Specialist cleaning for suits, formal wear and delicate fabrics using eco-friendly processes.</p>
                 </div>
             </div>
         </div>
@@ -1115,9 +1179,9 @@
     <section class="features">
         <div class="container">
             <div class="section-intro reveal">
-                <div class="section-badge">Excellence Defined</div>
-                <h2 class="section-title serif">Why Discerning Clients Choose Shangri-la</h2>
-                <p class="section-subtitle">Three generations of expertise combined with cutting-edge technology and an unwavering commitment to perfection</p>
+                <div class="section-badge">Why Choose Shangri-la</div>
+                <h2 class="section-title serif">Why customers choose our laundry service</h2>
+                <p class="section-subtitle">We're a local family business with 30 years of experience. Here's what makes us different:</p>
             </div>
             
             <div class="features-grid">
@@ -1127,8 +1191,8 @@
                             <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4C18.11 4 19 4.9 19 6V19C19 20.11 18.11 21 17 21H7C5.9 21 5 20.11 5 19V6C5 4.9 5.9 4 7 4M9 3V4H15V3H9M7 6V19H17V6H7M12 8L15.5 11L12 14L8.5 11L12 8Z"/>
                         </svg>
                     </div>
-                    <h3>Master Craftsmanship</h3>
-                    <p>Three decades of expertise with professional-grade equipment ensuring immaculate results for every garment</p>
+                    <h3>Experienced Team</h3>
+                    <p>Three decades in the laundry business means we know how to handle all types of fabrics and stains properly.</p>
                 </div>
                 <div class="feature-item reveal">
                     <div class="feature-icon">
@@ -1136,8 +1200,8 @@
                             <path d="M18 8C18.56 8 19.11 8.07 19.64 8.21L21.79 4.93L20.21 4.07L18.76 6.63C17.5 6.24 16.14 6 14.72 6H9.28C5.04 6 2 7.9 2 10.5S5.04 15 9.28 15H14.72C16.14 15 17.5 14.76 18.76 14.37L20.21 16.93L21.79 16.07L19.64 12.79C19.11 12.93 18.56 13 18 13V8M18 10V11H20V10H18Z"/>
                         </svg>
                     </div>
-                    <h3>Luxury Convenience</h3>
-                    <p>Seamless collection and delivery service that fits your lifestyle, with flexible scheduling and reliable timing</p>
+                    <h3>Convenient Service</h3>
+                    <p>Collection and delivery that fits around your schedule. Reliable timing you can count on.</p>
                 </div>
                 <div class="feature-item reveal">
                     <div class="feature-icon">
@@ -1145,8 +1209,8 @@
                             <path d="M17,8C17.44,8 17.84,8.05 18.21,8.14L19,6.27C19.8,4.53 21,4 21,4L20.5,3C20.5,3 18.24,3.5 16.5,5.24C15.31,6.44 14.64,8 14.64,8H9.36C9.36,8 8.69,6.44 7.5,5.24C5.76,3.5 3.5,3 3.5,3L3,4C3,4 4.2,4.53 5,6.27L5.79,8.14C6.16,8.05 6.56,8 7,8H17M7,10V20H9V10H7M15,10V20H17V10H15M11,10V20H13V10H11Z"/>
                         </svg>
                     </div>
-                    <h3>Sustainable Luxury</h3>
-                    <p>Premium eco-conscious processes that protect both your garments and our environment without compromise</p>
+                    <h3>Eco-Friendly Approach</h3>
+                    <p>We use environmentally responsible cleaning products and processes that are kind to your clothes and the planet.</p>
                 </div>
                 <div class="feature-item reveal">
                     <div class="feature-icon">
@@ -1154,8 +1218,8 @@
                             <path d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
                         </svg>
                     </div>
-                    <h3>Trusted Heritage</h3>
-                    <p>Family business serving discerning clients across Oxfordshire & Buckinghamshire with unmatched reputation</p>
+                    <h3>Local Family Business</h3>
+                    <p>Based in Bicester, we've built our reputation serving customers across Oxfordshire and Buckinghamshire.</p>
                 </div>
             </div>
         </div>
@@ -1166,25 +1230,25 @@
         <div class="container">
             <div class="section-intro reveal">
                 <div class="section-badge">Simple Process</div>
-                <h2 class="section-title serif">Effortless Elegance in Three Steps</h2>
-                <p class="section-subtitle">Experience the ultimate in convenience with our streamlined luxury service</p>
+                <h2 class="section-title serif">Simple laundry collection and delivery</h2>
+                <p class="section-subtitle">Getting your laundry done couldn't be easier:</p>
             </div>
             
             <div class="steps">
                 <div class="step reveal">
                     <div class="step-number">1</div>
-                    <h3>Reserve Collection</h3>
-                    <p>Schedule your pickup through our elegant booking system or call our concierge team directly</p>
+                    <h3>Book Collection</h3>
+                    <p>Call us or use our online booking form to arrange a pickup time that works for you.</p>
                 </div>
                 <div class="step reveal">
                     <div class="step-number">2</div>
-                    <h3>Expert Treatment</h3>
-                    <p>Our experienced staff provide careful treatment using professional techniques and eco-friendly processes</p>
+                    <h3>We Collect and Clean</h3>
+                    <p>Our team collects your items and cleans them using professional equipment and techniques.</p>
                 </div>
                 <div class="step reveal">
                     <div class="step-number">3</div>
-                    <h3>Perfect Delivery</h3>
-                    <p>Receive your impeccably finished garments, expertly pressed and ready for any occasion</p>
+                    <h3>Fresh Delivery</h3>
+                    <p>We return your laundry and dry cleaning, properly cleaned and pressed, ready to wear.</p>
                 </div>
             </div>
         </div>
@@ -1194,23 +1258,113 @@
     <section class="testimonials">
         <div class="container">
             <div class="section-intro reveal">
-                <div class="section-badge">Client Testimonials</div>
-                <h2 class="section-title serif">Trusted by Discerning Clients</h2>
-                <p class="section-subtitle">Discover why our clients choose Shangri-la for their most precious garments</p>
+                <div class="section-badge">Customer Reviews</div>
+                <h2 class="section-title serif">What our customers say</h2>
+                <p class="section-subtitle">Real reviews from customers who use our laundry and dry cleaning service</p>
             </div>
-            
-            <div class="testimonials-grid">
-                <div class="testimonial reveal">
-                    <p>The staff are very friendly, their advice always excellent. The quality of work is consistently outstanding. I would highly recommend Shangri-la to anyone seeking premium care.</p>
-                    <div class="testimonial-author">— Satisfied Client</div>
+
+            <div class="reviews-scroll-container">
+                <div class="reviews-grid" id="reviewsGrid">
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">Amazing service provided by such lovely people. I can't thank them enough. I will most certainly recommend them. Thank you Shangri-La Angels.</p>
+                        <div class="review-author">Jay Forrester</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">They offer such a wonderful service and our laundry always looks wonderful! Such friendly, helpful and brilliant staff. It's so good having our laundry collected and delivered, too.</p>
+                        <div class="review-author">Sonja Roffey</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">We have used the services of Shangri-la for several years and have nothing but the highest praise for all they do: ironing, laundry, emergency stain removal, and delivery/collection. All are excellent.</p>
+                        <div class="review-author">Fraser Gatehouse</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">Fantastic service. Broken washing machine so was really stuck. Shangri-la collected washed dried and returned washing in excellent time and very reasonable price. Took all the worry away.</p>
+                        <div class="review-author">Liz Wilkins</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">I couldn't live without Shangri La. They are friendly, helpful, efficient, high standards and will go out of their way to help if they can. Highly recommended.</p>
+                        <div class="review-author">Fiona Sutherland</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">I find all the members of the Shangri La team to be helpful, accommodating and always professional. Their attention to detail is simply unmatched in the region.</p>
+                        <div class="review-author">Lisa Kent</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">Fantastic service through and through - very flexible to take a last minute load of dry cleaning and washing, seamless pick up and delivery, a very courteous team and perfectly cleaned items.</p>
+                        <div class="review-author">D S</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">I have used Shangri-la Laundry services over the past five years. Always a great service, sending a text to let you know when to collect, friendly and helpful staff.</p>
+                        <div class="review-author">Clive Fretwell</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">Shangri-la has proven to be consistently reliable, helpful and efficient. We are delighted with their laundry and ironing services.</p>
+                        <div class="review-author">Tom Battye</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">A really lovely bunch. They're upfront about the costs and their work is excellent. Great service and a quick turn around, I found Shangri-la great value for money.</p>
+                        <div class="review-author">Steve Green</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">I have used the ironing service for years. The staff are very friendly, their advice always excellent. The quality of work is consistently outstanding.</p>
+                        <div class="review-author">Samantha Anderson</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">Great service… can't recommend highly enough. Wish I'd found you years ago! Excellent service, pick up and drop off, perfect for a busy lifestyle.</p>
+                        <div class="review-author">Anna Tomlinson</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">Excellent service, including collection and delivery of laundry. Highly recommend. Great service, good prices, nice people to deal with.</p>
+                        <div class="review-author">Cesca Maurice-Williams</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">So happy with the service, really friendly, clear pricing and efficient. Fantastic job and amazing customer service! Excellent service!</p>
+                        <div class="review-author">Polly Gibbs</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">Brilliant ironing service. Difficult linen shirts come back perfect. Very helpful staff. Amazing service excellent customer service.</p>
+                        <div class="review-author">Anne Matthews</div>
+                    </article>
+                    
+                    <article class="review-card">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">We, at Stratton Court Barn, love Shangri-la and their efficient service, friendly people and also want to support local family business.</p>
+                        <div class="review-author">Jonnie Wigmore</div>
+                    </article>
                 </div>
-                <div class="testimonial reveal">
-                    <p>I find all the members of the Shangri-La team to be helpful, accommodating and always professional. Their attention to detail is simply unmatched in the region.</p>
-                    <div class="testimonial-author">— Regular Customer</div>
-                </div>
-                <div class="testimonial reveal">
-                    <p>Great service and a quick turn around. I found Shangri-la great value for money considering the exceptional quality and convenience they provide.</p>
-                    <div class="testimonial-author">— Business Professional</div>
+                
+                <div class="reviews-nav">
+                    <button aria-label="Previous" class="reviews-btn" id="reviewsPrev">‹</button>
+                    <button aria-label="Next" class="reviews-btn" id="reviewsNext">›</button>
                 </div>
             </div>
         </div>
@@ -1220,26 +1374,26 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-intro reveal">
-                <div class="section-badge">Transparent Pricing</div>
-                <h2 class="section-title serif">Investment in Excellence</h2>
-                <p class="section-subtitle">Premium quality at competitive rates. All prices include VAT with no hidden fees</p>
+                <div class="section-badge">Fair Pricing</div>
+                <h2 class="section-title serif">Clear, fair pricing</h2>
+                <p class="section-subtitle">All prices include VAT with no hidden charges.</p>
             </div>
             
             <div class="pricing-grid">
                 <div class="pricing-card reveal">
-                    <h3>Premium Laundry</h3>
+                    <h3>Laundry Service</h3>
                     <div class="price">£4.15<span class="price-unit">/kg</span></div>
-                    <p>Commercial-grade washing with luxury eco-friendly detergents and precision care</p>
+                    <p>Professional washing with quality detergents and proper care.</p>
                 </div>
                 <div class="pricing-card reveal">
-                    <h3>Master Ironing</h3>
+                    <h3>Ironing Service</h3>
                     <div class="price">£7.50<span class="price-unit">/kg</span></div>
-                    <p>Professional pressing from £2.97 per shirt with expert finishing techniques</p>
+                    <p>Expert pressing from £2.97 per shirt with professional finishing.</p>
                 </div>
                 <div class="pricing-card reveal">
-                    <h3>Concierge Service</h3>
-                    <div class="price">£2.00<span class="price-unit">delivery</span></div>
-                    <p>White-glove collection and delivery within 25 miles of Bicester</p>
+                    <h3>Collection & Delivery</h3>
+                    <div class="price">£2.00<span class="price-unit">per trip</span></div>
+                    <p>Door-to-door service within 25 miles of Bicester.</p>
                 </div>
             </div>
             
@@ -1253,46 +1407,14 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-intro reveal">
-                <div class="section-badge">Book Your Service</div>
-                <h2 class="section-title serif">Schedule Your Collection</h2>
-                <p class="section-subtitle">Begin your luxury laundry experience with our simple booking process</p>
+                <div class="section-badge">Get Started</div>
+                <h2 class="section-title serif">Get your laundry collected</h2>
+                <p class="section-subtitle">Ready to try our service? Book a collection or get in touch with any questions.</p>
             </div>
             
             <div class="form-container reveal">
-                <form>
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Collection Address</label>
-                        <textarea id="address" name="address" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service Required</label>
-                        <select id="service" name="service" required>
-                            <option value="">Please select your preferred service...</option>
-                            <option value="laundry">Premium Laundry Service</option>
-                            <option value="dry-cleaning">Expert Dry Cleaning</option>
-                            <option value="ironing">Master Ironing Service</option>
-                            <option value="commercial">Commercial Services</option>
-                            <option value="consultation">Personal Consultation</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Special Requirements (Optional)</label>
-                        <textarea id="message" name="message" placeholder="Please share any specific care instructions or preferences..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Schedule Collection</button>
-                </form>
+                <iframe data-tally-src="https://tally.so/embed/mRAzRp?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="1119" frameborder="0" marginheight="0" marginwidth="0" title="Request a collection"></iframe>
+                <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
             </div>
         </div>
     </section>
@@ -1303,12 +1425,12 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contact Information</h3>
-                    <p>17 Wedgewood Road<br>Bicester, Oxfordshire<br>OX26 4UL</p>
+                    <p><strong>Address:</strong><br>17 Wedgewood Road<br>Bicester, Oxfordshire<br>OX26 4UL</p>
                     <p><strong>Phone:</strong> 01869 369485<br><strong>Mobile:</strong> 07806 634494</p>
                     <p><strong>Email:</strong> enquiry@shangrilairon.co.uk</p>
                 </div>
                 <div class="footer-section">
-                    <h3>Business Hours</h3>
+                    <h3>Opening Hours</h3>
                     <p><strong>Monday - Tuesday</strong><br>8:00am - 5:30pm</p>
                     <p><strong>Wednesday - Friday</strong><br>8:00am - 1:00pm</p>
                     <p><strong>Saturday</strong><br>9:00am - 12:00pm</p>
@@ -1325,8 +1447,8 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <p>Follow our journey and discover luxury laundry tips</p>
+                    <h3>About Shangri-la</h3>
+                    <p>Local laundry and dry cleaning experts serving Oxfordshire and Buckinghamshire since 2014. A family business with 30 years of experience in fabric care.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook">f</a>
                         <a href="#" aria-label="Instagram">i</a>
@@ -1334,7 +1456,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Shangri-la Laundry and Ironing Ltd. All rights reserved. | Luxury laundry services in Oxfordshire & Buckinghamshire</p>
+                <p>&copy; 2024 Shangri-la Laundry and Ironing Ltd. All rights reserved. | Professional laundry services in Oxfordshire & Buckinghamshire</p>
             </div>
         </div>
     </footer>
@@ -1412,9 +1534,6 @@
             }
         });
 
-        // Enhanced Form Submission - removed since using Tally form
-        // The Tally form handles its own submission
-
         // Advanced Loading Animation
         window.addEventListener('load', function() {
             document.body.classList.add('loaded');
@@ -1426,6 +1545,31 @@
             element.style.animationDelay = `${index * 0.5}s`;
             element.style.animationDuration = `${6 + index}s`;
         });
+
+        // Reviews Carousel JavaScript
+        (function(){
+            const grid = document.getElementById('reviewsGrid');
+            const prev = document.getElementById('reviewsPrev');
+            const next = document.getElementById('reviewsNext');
+            
+            function cardStep(){
+                const c = grid?.querySelector('.review-card');
+                return c ? c.getBoundingClientRect().width + 20 : 320;
+            }
+            
+            function updateButtons(){
+                if(!grid || !prev || !next) return;
+                prev.disabled = grid.scrollLeft <= 0;
+                const max = grid.scrollWidth - grid.clientWidth - 2;
+                next.disabled = grid.scrollLeft >= max;
+            }
+            
+            prev?.addEventListener('click', ()=> grid.scrollBy({ left: -cardStep(), behavior: 'smooth' }));
+            next?.addEventListener('click', ()=> grid.scrollBy({ left:  cardStep(), behavior: 'smooth' }));
+            grid?.addEventListener('scroll', updateButtons);
+            window.addEventListener('load', updateButtons);
+            window.addEventListener('resize', updateButtons);
+        })();
     </script>
 </body>
 </html>
